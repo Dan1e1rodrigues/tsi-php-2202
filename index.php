@@ -1,5 +1,5 @@
 <?php
-$nome='Chefe, Daniel';
+$nome='Daniel';
 
 echo "Olá $nome";
 //Comentário de linha
@@ -10,14 +10,3 @@ de
 bloco
 */
 
-$nome='Daniel';//variavel
-
-echo "Meu nome é $nome";
-//Comentário de linha
-#Comentário de linha 
-/*
-Comentário
-de 
-bloco
-*/
-?>
