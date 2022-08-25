@@ -9,11 +9,8 @@ echo "$nome Numero 1 <br>";
 em
 bloco
 */
-
 //documentação de php fica em: https://www.php.net
-
 //LOOPINGS
-
 //FOR
 for ($i = 2; $i <= 10; $i++) {
     echo "$nome Daniel $i <br>"; 
@@ -75,3 +72,4 @@ switch ($d) {
         break;    
 }
 //FIM CONDICIONAIS
+//CUIDADO COM AS PASTAS, POIS ELAS PODEM ATRAPALHAR O XAMMP PARA ACHAR A PASTA CORRETA.
