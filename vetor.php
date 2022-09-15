@@ -2,7 +2,7 @@
 
 //Vetores e seus diferentes tipos
 
-//Lembre de fecharcom ";"
+// Lembre de fecharcom ";"
 $diaSemana = [0 => 'Domingo', 1 => 'Segunda', 2 => 'Terça',
  3 => 'Quarta', 4 => 'Quinta', 5 => 'Sexta', 6 => 'Sabado'];
 
@@ -11,12 +11,14 @@ $diaSemana = [0 => 'Domingo', 1 => 'Segunda', 2 => 'Terça',
 
 //Novemente lembre de fechar com ";"
 
-/*
-$hoje = date('d/m/y');
+
+$date = date('w');
+echo "Hoje é {$diaSemana[$date]}<br>";
+
 
 echo "hoje é {$diaSemana[$hoje]}";//Interpolação com vetor
 
-*/
+
 //echo cout($aluno)
 $aluno = [ 
 0 => ['matricula' => 4455, 'nome' => 'Daniel','semestre' => 2],
@@ -36,12 +38,20 @@ echo '<table border = "1">
 
 for( $i = 0 ; $i < count($aluno) ; $i++ ){
    echo "   <tr>
-                <th>{$aluno[$i]['matricula']}</th>
-                <th>{$aluno[$i]['nome']}</th>
-                <th>{$aluno[$i]['semestre']}</th>
+                <td>{$aluno[$i]['matricula']}</td>
+                <td>{$aluno[$i]['nome']}</td>
+                <td>{$aluno[$i]['semestre']}</td>
             </tr>";
 }
 
+foreach( $aluno as $ind => $val ) {
+
+    echo "  <tr>
+                <td>{$val['matricula']}</td>
+                <td>{$val['nome']}</td>
+                <td>{$val[semestre]}</td>
+            </tr>";
+}
 
 echo '</table>';
 
