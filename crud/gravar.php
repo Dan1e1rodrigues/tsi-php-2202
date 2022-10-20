@@ -33,12 +33,16 @@ pelos dados inseguros
 
 /*Flexa em ingles arrow ->*/
 if($consulta->execute() ){
-    echo "GRAVOU COM SUCESSO!";
+    $gravou = true;
 }
 else{
-    echo "Error ao gravar no banco de dados";
+    $gravou = false;
 }
 //Iniciamos a consulta no SGBD
+//Finalmente executamos a consulta
+//no SGBD
+
+include 'index.php';
 
 
 
