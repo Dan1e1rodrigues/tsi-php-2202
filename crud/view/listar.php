@@ -29,28 +29,48 @@
         }
     }
 ?>
-    <table class="table">
-        <thead>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Turno</th>
-            <th>Inicio</th>
-            <th>Ações</th>
-        </thead>
 
-        <?php
-        foreach($alunos as $aluno){
+//mostrar para latifi
+    <form method="post">
+        <table class="table">
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Turno</th>
+                <th>Inicio</th>
+                <th>Ações</th>
+            </thead>
 
-            echo " <tr>
-                        <td>{$aluno['id']}</td>
-                        <td>{$aluno['nome']}</td>
-                        <td>{$aluno['turno']}</td>
-                        <td>{$aluno['inicio']}</td>
+            <?php
+            //mostrar para latifi
+            foreach($alunos as $aluno){
 
-                    </tr>";
-        }
-        ?>
+                echo " <tr>
+                            <td>{$aluno['id']}</td>
+                            <td>{$aluno['nome']}</td>
+                            <td>{$aluno['turno']}</td>
+                            <td>{$aluno['inicio']}</td>
+                            <td>
+                                <button
+                                    class='btn btn-danger'
+                                    formaction='apagar.php'
+                                    value='{$aluno['id']}'
+                                    name='id'>
+                                    Apagar
+                                </button>
 
+                                <button
+                                class='btn btn-danger'
+                                formaction='apagar.php'
+                                value='{$aluno['id']}'
+                                name='id'>
+                                Editar
+                            </button>
+                            </td>
+                        </tr>";
+            }
+            ?>
     </table>
+    </form>
 </body>
 </html>
