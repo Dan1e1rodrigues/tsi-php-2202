@@ -1,58 +1,51 @@
 <?php
 
-//Vetores e seus diferentes tipos
+//Vetores
 
-// Lembre de fecharcom ";"
-$diaSemana = [0 => 'Domingo', 1 => 'Segunda', 2 => 'Terça',
- 3 => 'Quarta', 4 => 'Quinta', 5 => 'Sexta', 6 => 'Sabado'];
+$diaSemana = [  0 => 'Domingo', 1 => 'Segunda', 2 => 'Terça', 
+                3 => 'Quarta', 4 => 'Quinta', 5 => 'Sexta', 
+                6 => 'Sábado'];
 
-//Muito importante para a depuração do código - echo "<pre>";
-//var_dumb($diaSemana);
+//Muito importante para depuração do código - var_dump()
+//var_dump($diaSemana);
 
-//Novemente lembre de fechar com ";"
+$hoje = date('w');
 
+echo "Hoje é {$diaSemana[$hoje]}<br><br>"; //interpolação com vetor precisa das {}
 
-$date = date('w');
-echo "Hoje é {$diaSemana[$date]}<br>";
+$aluno = [  0 => [  'matricula' => 634545, 
+                    'nome' => 'João',
+                    'semestre' => 2],
+            1 => [  'matricula' => 8548, 
+                    'nome' => 'Paulo',
+                    'semestre' => 3],
+            2 => [  'matricula' => 65422, 
+                    'nome' => 'Maria',
+                    'semestre' => 1]];
 
-
-echo "hoje é {$diaSemana[$hoje]}";//Interpolação com vetor
-
-
-//echo cout($aluno)
-$aluno = [ 
-0 => ['matricula' => 4455, 'nome' => 'Daniel','semestre' => 2],
-1 => ['matricula' => 9898, 'nome' => 'Paulo', 'semestre' => 3],
-2 => ['matricula' => 7886, 'nome' => 'Felipe', 'semestre' => 1]
-];
-
-var_dump($aluno);
-
-//E desta forma desenvolvemos uma tabela em PHP
 echo '<table border = "1">
         <tr>
-            <td>Matricula</td>
+            <td>Matrícula</td>
             <td>Nome</td>
             <td>Semestre</td>
         </tr>';
 
 for( $i = 0 ; $i < count($aluno) ; $i++ ){
-   echo "   <tr>
-                <td>{$aluno[$i]['matricula']}</td>
-                <td>{$aluno[$i]['nome']}</td>
-                <td>{$aluno[$i]['semestre']}</td>
+
+    echo "  <tr>
+                <td> {$aluno[$i]['matricula']} </td>
+                <td> {$aluno[$i]['nome']} </td>
+                <td> {$aluno[$i]['semestre']} </td>
             </tr>";
 }
 
-foreach( $aluno as $ind => $val ) {
+foreach( $aluno as $ind => $val ){
 
-    echo "  <tr>
-                <td>{$val['matricula']}</td>
-                <td>{$val['nome']}</td>
-                <td>{$val[semestre]}</td>
-            </tr>";
+        echo "  <tr>
+                        <td>{$val['matricula']}</td>
+                        <td>{$val['nome']}</td>
+                        <td>{$val['semestre']}</td>
+                </tr>";
 }
 
 echo '</table>';
-
-?>
