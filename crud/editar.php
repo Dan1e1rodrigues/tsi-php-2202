@@ -16,6 +16,8 @@ $stmt->execute();
 
 $aluno = $stmt->fetch(PDO::FETCH_ASSOC);
 
+require_once 'formEditar.php';
+
 //Exercicio
 
 //Mostrar um formulario HTML para o usuario 
